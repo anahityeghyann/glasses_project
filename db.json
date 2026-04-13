@@ -1,0 +1,80 @@
+{
+    "glasses": [
+        {
+            "id": 1,
+            "model": "SYNC2 X-M",
+            "category": "Intelligent glasses",
+            "price": 324,
+            "image": "/glass1.jpg"
+        },
+        {
+            "id": 2,
+            "model": "MC80 FT-6",
+            "category": "Intelligent glasses",
+            "price": 488,
+            "image": "/glass2.jpg"
+        },
+        {
+            "id": 3,
+            "model": "NEXUS 43-N",
+            "category": "Intelligent glasses",
+            "price": 520,
+            "image": "/glass3.jpg"
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "image": "/pic4.jpg",
+            "alt": "Berlin Style Tech",
+            "date": "March 15-17",
+            "title": "LONDON LUXE TECH EXPO",
+            "activeCity": "LONDON",
+            "description": "This annual gathering in London showcases the latest in wearable tech, smart fabrics, and sustainable design."
+        },
+        {
+            "id": 2,
+            "image": "/pic1.jpg",
+            "alt": "Paris Style Tech",
+            "date": "June 9-11",
+            "title": "Paris Chic 2032",
+            "activeCity": "PARIS",
+            "description": "Experience cutting-edge fashion and technology on the runways of Paris, with augmented reality dresses and AI-designed apparel in the spotlight."
+        },
+        {
+            "id": 3,
+            "image": "/pic2.jpg",
+            "alt": "Milan Fashion Tech",
+            "date": "November 5-7",
+            "title": "Milan Fashion Tech",
+            "activeCity": "MILAN",
+            "description": "Join global leaders in Milan for a summit on Luxury fashion and emerging tech, featuring VR shopping experiences and blockchain for authenticity."
+        },
+        {
+            "id": 4,
+            "image": "/pic3.jpg",
+            "alt": "Berlin Style Tech",
+            "date": "September 22-24",
+            "title": "Berlin Style Tech",
+            "activeCity": "BERLIN",
+            "description": "Hosted in Berlin, the Style Tech Fair is a hub for innovative fashion technology, focusing on sustainability and cutting-edge tech in apparel."
+        }
+    ],
+    "upcoming": [
+        {
+            "id": 1,
+            "image": "/contact.avif",
+            "title": "SYNC2 X-M"
+        },
+        {
+            "id": 2,
+            "image": "/contact2.avif",
+            "title": "SYNC2 X-M"
+        },
+        {
+            "id": 3,
+            "image": "/contact3.avif",
+            "title": "SYNC2 X-M"
+        }
+    ]
+}
