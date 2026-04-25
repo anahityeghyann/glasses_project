@@ -5,21 +5,42 @@
             "model": "SYNC2 X-M",
             "category": "Intelligent glasses",
             "price": 324,
-            "image": "/glass1.jpg"
+            "image": "/glass1.jpg",
+            "color": "Black",
+            "material": "Lightweight composite frame with embedded electronics",
+            "languageSupport": "Multi-language (via connected smartphone app)",
+            "battery": "Rechargeable lithium battery",
+            "compatibility": "Android & IOS smartphones",
+            "weight": "Approx. 40-80g",
+            "dimensions": "Standard medium eyewear size"
         },
         {
             "id": 2,
             "model": "MC80 FT-6",
             "category": "Intelligent glasses",
             "price": 488,
-            "image": "/glass2.jpg"
+            "image": "/glass2.jpg",
+            "color": "Graphite",
+            "material": "Lightweight composite frame with embedded electronics",
+            "languageSupport": "Multi-language (via connected smartphone app)",
+            "battery": "Rechargeable lithium battery",
+            "compatibility": "Android & IOS smartphones",
+            "weight": "Approx. 40-80g",
+            "dimensions": "Standard medium eyewear size"
         },
         {
             "id": 3,
             "model": "NEXUS 43-N",
             "category": "Intelligent glasses",
             "price": 520,
-            "image": "/glass3.jpg"
+            "image": "/glass3.jpg",
+            "color": "Silver",
+            "material": "Lightweight composite frame with embedded electronics",
+            "languageSupport": "Multi-language (via connected smartphone app)",
+            "battery": "Rechargeable lithium battery",
+            "compatibility": "Android & IOS smartphones",
+            "weight": "Approx. 40-80g",
+            "dimensions": "Standard medium eyewear size"
         }
     ],
     "events": [

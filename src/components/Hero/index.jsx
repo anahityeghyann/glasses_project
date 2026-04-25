@@ -1,10 +1,13 @@
 import hero_background from "/hero-bg.jpg"
 import logo from "/logo2.svg"
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion"
+import { Link } from "react-router-dom"
+import { useCart } from "../../context/useCart"
 
-
+  
 const Hero = () => {
   const Motion = motion
+  const { totalQty } = useCart()
   const mx = useMotionValue(0)
   const my = useMotionValue(0)
   const smx = useSpring(mx, { stiffness: 120, damping: 20 })
@@ -75,30 +78,35 @@ const Hero = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.25 }}
         >
           <div className="flex items-center justify-between w-48">
-            <Motion.a href="#" className="hover:opacity-70" whileHover={{ y: -1 }} transition={{ duration: 0.15 }}>
+            <Link
+              to="/#products"
+              className="font-bold hover:opacity-70 transition-opacity"
+            >
               Products
-            </Motion.a>
+            </Link>
             <Motion.button
               className="border border-white px-3 py-1 rounded text-xs hover:bg-white hover:text-black transition"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.15 }}
             >
-              CART (0)
+              <Link to="/cart" className="block">
+                CART ({totalQty})
+              </Link>
             </Motion.button>
           </div>
-          <Motion.a href="#" className="hover:opacity-70" whileHover={{ y: -1 }} transition={{ duration: 0.15 }}>
+          <Link to="/#about" className="font-bold hover:opacity-70 transition-opacity">
             About
-          </Motion.a>
-          <Motion.a href="#" className="hover:opacity-70" whileHover={{ y: -1 }} transition={{ duration: 0.15 }}>
+          </Link>
+          <Link to="/#events" className="font-bold hover:opacity-70 transition-opacity">
             Events
-          </Motion.a>
-          <Motion.a href="#" className="hover:opacity-70" whileHover={{ y: -1 }} transition={{ duration: 0.15 }}>
+          </Link>
+          <Link to="/#upcoming" className="font-bold hover:opacity-70 transition-opacity">
             Upcoming
-          </Motion.a>
-          <Motion.a href="#" className="hover:opacity-70" whileHover={{ y: -1 }} transition={{ duration: 0.15 }}>
+          </Link>
+          <Link to="/#contact" className="font-bold hover:opacity-70 transition-opacity">
             Contact
-          </Motion.a>
+          </Link>
         </Motion.div>
 
         <Motion.div

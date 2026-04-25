@@ -18,7 +18,7 @@ const Upcoming = () => {
     const activeGlass = useMemo(() => upcoming[activeIndex], [upcoming, activeIndex])
 
     useEffect(() => {
-        const el = document.getElementById("upcoming-section")
+        const el = document.getElementById("upcoming")
         if (!el) return
 
         const onWheel = (e) => {
@@ -51,8 +51,8 @@ const Upcoming = () => {
 
     return (
         <section
-            id="upcoming-section"
-            className="bg-cover bg-center h-[100vh] w-full flex flex-col justify-between items-center p-14"
+            id="upcoming"
+            className="scroll-mt-8 bg-cover bg-center h-[100vh] w-full flex flex-col justify-between items-center p-14"
             style={{ backgroundImage: activeGlass?.image ? `url(${activeGlass.image})` : undefined }}
         >
             <h1 className="text-black text-7xl font-extrabold">

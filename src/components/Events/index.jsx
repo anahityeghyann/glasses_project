@@ -97,7 +97,7 @@ const Events = () => {
   }, [eventsData])
 
   return (
-    <div className="max-w-6xl mx-auto my-12">
+    <section id="events" className="scroll-mt-8 max-w-6xl mx-auto my-12 px-4 sm:px-6">
       <div className="flex flex-col lg:flex-row gap-10 items-start">
         <div className="lg:sticky lg:top-10 lg:self-start">
           <LeftStickyCard activeEvent={activeEvent} />
@@ -116,7 +116,7 @@ const Events = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

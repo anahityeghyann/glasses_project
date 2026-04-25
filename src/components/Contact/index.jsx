@@ -1,17 +1,17 @@
 import logo from "/logo.png"
 
 const socialLinks = [
-  { name: "INSTAGRAM", href: "#" },
-  { name: "TWITTER", href: "#" },
-  { name: "EMAIL", href: "#" },
-  { name: "MEDIUM", href: "#" },
+  { name: "INSTAGRAM", href: "https://www.instagram.com/" },
+  { name: "TWITTER", href: "https://x.com/" },
+  { name: "FACEBOOK", href: "https://www.facebook.com/" },
+  { name: "YOUTUBE", href: "https://www.youtube.com/" },
 ]
 
 
 
 const Contact = () => {
   return (
-    <div>
+    <section id="contact" className="scroll-mt-8">
       <div
         className="relative h-screen w-full bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(https://framerusercontent.com/images/fWiQd13h8iBjSAQuk7JTB8euBE.png)` }}
@@ -51,6 +51,7 @@ const Contact = () => {
                 <a
                   key={index}
                   href={link.href}
+                  target="_blank"
                   className="group flex items-center justify-between border-b-3 border-white pb-3"
                 >
                   <span className="tracking-wide text-lg font-bold">
@@ -67,7 +68,7 @@ const Contact = () => {
 
         </div>
       </div>
-    </div>
+    </section>
 
   );
 };

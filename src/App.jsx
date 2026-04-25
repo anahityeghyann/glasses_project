@@ -1,20 +1,22 @@
 import './App.css'
-import Events from './components/Events'
-import Glasses from './components/Glasses'
-import Hero from './components/Hero'
-import Upcoming from './components/Upcoming'
-import Contact from './components/Contact'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+import GlassDetails from "./pages/GlassDetails"
+import Cart from "./pages/Cart"
+import { CartProvider } from "./context/CartProvider"
 
 function App() {
 
   return (
-    <>
-      <Hero />
-      <Glasses />
-      <Events />
-      <Upcoming/>
-      <Contact/>
-    </>
+    <BrowserRouter>
+      <CartProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/glasses/:id" element={<GlassDetails />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
+      </CartProvider>
+    </BrowserRouter>
   )
 }
 

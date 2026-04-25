@@ -2,9 +2,12 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import About from '../About'
 import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
+import { useCart } from "../../context/useCart"
 
 const Glasses = () => {
     const Motion = motion
+    const { addItem } = useCart()
     const [glasses, setGlasses] = useState([])
     useEffect(() => {
         axios.get("http://localhost:3000/glasses")
@@ -12,10 +15,11 @@ const Glasses = () => {
             .catch((error) => console.error(error))
     }, [])
     return (
-        <div>
+        <div className="bg-gradient-to-b from-white to-zinc-50/80">
             <About />
             <Motion.div
-                className='flex gap-8 justify-center h-[100vh] items-center'
+                id="products"
+                className='scroll-mt-8 flex flex-wrap gap-8 justify-center min-h-[100vh] items-center px-4 py-16'
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.25 }}
@@ -36,17 +40,21 @@ const Glasses = () => {
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.995 }}
                     >
-                        <Motion.img
-                            src={glass.image}
-                            alt=""
-                            className='w-[400px]'
-                            whileHover={{ scale: 1.01 }}
-                            transition={{ duration: 0.2, ease: "easeOut" }}
-                        />
+                        <Link to={`/glasses/${glass.id}`}>
+                            <Motion.img
+                                src={glass.image}
+                                alt=""
+                                className='w-[400px]'
+                                whileHover={{ scale: 1.01 }}
+                                transition={{ duration: 0.2, ease: "easeOut" }}
+                            />
+                        </Link>
                         <div className='flex w-full justify-between'>
                             <div>
                                 <p className='text-xs font-bold text-zinc-500 mb-1'>{glass.category}</p>
-                                <h3 className='text-base font-bold'>{glass.model}</h3>
+                                <Link to={`/glasses/${glass.id}`} className="hover:underline">
+                                    <h3 className='text-base font-bold'>{glass.model}</h3>
+                                </Link>
                             </div>
                             <div className='text-end'>
                                 <p className='text-xs font-bold text-zinc-500 mb-1'>Price</p>
@@ -58,6 +66,16 @@ const Glasses = () => {
                             whileHover={{ scale: 1.01 }}
                             whileTap={{ scale: 0.99 }}
                             transition={{ duration: 0.15 }}
+                            type="button"
+                            onClick={() =>
+                              addItem({
+                                id: glass.id,
+                                model: glass.model,
+                                price: glass.price,
+                                image: glass.image,
+                                qty: 1,
+                              })
+                            }
                         >
                             Add to cart
                         </Motion.button>
