@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams } from "react-router-dom"
 import { FiShoppingCart } from "react-icons/fi"
 import { IoMdHeartEmpty } from "react-icons/io"
 import { useCart } from "../context/useCart"
+import toast from "react-hot-toast"
 
 const SPEC_LABELS = [
   ["color", "Color"],
@@ -143,6 +144,7 @@ export default function GlassDetails() {
                           image: glass.image,
                           qty,
                         })
+                        toast.success(`Added ${qty} × ${glass.model}`, { icon: "🛒" })
                         navigate("/cart")
                       }}
                       className="w-full rounded-2xl bg-orange-600 text-white font-extrabold py-3.5 flex items-center justify-center gap-2 hover:bg-orange-700 transition"

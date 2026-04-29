@@ -4,6 +4,7 @@ import About from '../About'
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
 import { useCart } from "../../context/useCart"
+import toast from "react-hot-toast"
 
 const Glasses = () => {
     const Motion = motion
@@ -62,12 +63,12 @@ const Glasses = () => {
                             </div>
                         </div>
                         <Motion.button
-                            className='w-[100%] bg-orange-500 text-white py-2 rounded-xl'
+                            className='w-[100%] bg-orange-500 text-white py-2 rounded-xl cursor-pointer'
                             whileHover={{ scale: 1.01 }}
                             whileTap={{ scale: 0.99 }}
                             transition={{ duration: 0.15 }}
                             type="button"
-                            onClick={() =>
+                            onClick={() => {
                               addItem({
                                 id: glass.id,
                                 model: glass.model,
@@ -75,7 +76,10 @@ const Glasses = () => {
                                 image: glass.image,
                                 qty: 1,
                               })
-                            }
+                              toast.success(`${glass.model} added to cart`, {
+                                icon: "🛒",
+                              })
+                            }}
                         >
                             Add to cart
                         </Motion.button>
