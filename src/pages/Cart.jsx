@@ -17,7 +17,6 @@ export default function Cart() {
 
   const onPay = (e) => {
     e.preventDefault()
-    // UI-only demo
     alert(`Payment submitted (demo)\nTotal: $${total.toFixed(2)}`)
     clear()
     setFullName("")
